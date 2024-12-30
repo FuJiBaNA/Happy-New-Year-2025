@@ -1,21 +1,22 @@
 
 var fireworksSound = new Audio('fireworks.mp3');
-
+var songs = new Audio(); 
 
 fireworksSound.loop = false;
+songs.loop = true;
+
+document.getElementById('box').addEventListener('click', function () {
+    fireworksSound.play();
 
 
-document.getElementById('box').addEventListener('click', function() {
-    fireworksSound.play(); 
+    fireworksSound.onended = function () {
 
-    fireworksSound.onended = function() {
-        var iframe = document.createElement('iframe');
-        iframe.src = 'https://www.youtube.com/embed/6wHOeCUhEnk?autoplay=1&loop=1&playlist=6wHOeCUhEnk';
-        iframe.allow = 'autoplay';
-        document.body.appendChild(iframe);
+        songs.src = 'song.m4a'; 
+        songs.play(); 
     };
-    
 
+
+    createHeartRain();
 });
 
 
