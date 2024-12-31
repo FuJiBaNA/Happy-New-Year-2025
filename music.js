@@ -1,4 +1,3 @@
-
 var fireworksSound = new Audio('fireworks.mp3');
 var songs = new Audio(); 
 
@@ -14,9 +13,5 @@ document.getElementById('box').addEventListener('click', function () {
         songs.src = 'song.m4a'; 
         songs.play(); 
     };
-
-
-    createHeartRain();
 });
-
 
